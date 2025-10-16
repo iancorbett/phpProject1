@@ -19,7 +19,7 @@ $csvPath = __DIR__ . '/data/form_submissions1.csv';
 
 <?php if (!file_exists($csvPath)): ?> <!-- if file doesnt exist -->
     <p class="notice">No data yet — submit the form first.</p> <!-- return message if no submission made -->
-
+<?php else: ?> <!-- else if it does exist then create a table-->
 
 <table class="table">
       <thead>
