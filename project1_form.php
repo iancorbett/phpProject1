@@ -48,6 +48,6 @@ if ($val === '') { $errors[] = $label . ' is required.'; } //phone is optional t
       <button type="submit">Save to CSV</button>
     </div>
   </form>
-    
+  <footer><small class="mono">Data file: data/project1_leads.csv</small></footer>
 </body>
 </html>
