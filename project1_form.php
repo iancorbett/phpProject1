@@ -20,5 +20,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     ['E-mail Address',$email],['Appraised Value of House',$appraised]] as [$label,$val]){
 if ($val === '') { $errors[] = $label . ' is required.'; } //phone is optional thus why its not listed here in the array
 }
-
 }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-1: Data-Collection</title>
+</head>
+<body>
+    
+</body>
+</html>
