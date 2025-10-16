@@ -1,8 +1,8 @@
 <?php
 
-$csvPath = __DIR__ . '/data/form_submissions1.csv';
-
-$errors = [];
+$csvPath = __DIR__ . '/data/form_submissions1.csv'; //file path to our csv
+$errors = []; //errors will be logged in array that we start as empty
+$success = false; //initialize to false, will be true upon successful update to the csv
 
 function clean($v){ return trim($v ?? ''); } //TAKES IN VALUE AND TRIMS IT, if null it defaults to an empty string
 
