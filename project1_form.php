@@ -9,4 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $city  = clean($_POST['city'] ?? '');
     $state = clean($_POST['state'] ?? '');
     $zip   = clean($_POST['zip'] ?? '');
+    $email = clean($_POST['email'] ?? '');
+    $phone = clean($_POST['phone'] ?? '');
+    $appraised = clean($_POST['appraised_value'] ?? '');
 }
