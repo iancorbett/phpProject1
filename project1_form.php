@@ -33,6 +33,7 @@ if ($val === '') { $errors[] = $label . ' is required.'; } //phone is optional t
 <body>
 
 <h1>Project #1 – Data Collection Form</h1>
+<nav><a href="project1_view.php">View CSV</a></nav>
 
  <form method="post" novalidate> <!-- already validating with earlier foreach loop -->
     <label>First Name<input name="first_name" required></label>
