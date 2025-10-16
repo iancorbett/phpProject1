@@ -71,6 +71,12 @@ if (file_exists($csvPath)) { // only if csv file exists
           </tr>
         <?php endforeach; ?>
       </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="9">Total records: <?= count($rows) ?></td>
+          <td><?= number_format($sum, 2) ?></td>
+        </tr>
+      </tfoot>
     </table>
     
     <?php endif; ?>
