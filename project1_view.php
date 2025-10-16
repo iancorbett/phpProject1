@@ -14,6 +14,12 @@ if (file_exists($csvPath)) { // only if csv file exists
       }
       fclose($fh); //close file
     }
+
+    usort($rows, function ($a, $b) { //user defined sort, sorting $rows array using custom rule
+        $c = strcasecmp($a['city'] ?? '', $b['city'] ?? ''); //strcasecmp is built in php function that ocmpares two srings (case insenstitve) and determines their order alphebetically
+        if ($c !== 0) return $c; //only returns zero if they are identical
+        return strcasecmp($a['last_name'] ?? '', $b['last_name'] ?? ''); //compare by cities if last names are identical
+      });
 }
 
 ?>
