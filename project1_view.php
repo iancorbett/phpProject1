@@ -4,6 +4,17 @@ $csvPath = __DIR__ . '/data/form_submissions1.csv';
 
 $rows = [];
 
+if (file_exists($csvPath)) { // only if csv file exists
+    if (($fh = fopen($csvPath, 'r')) !== false) { //open the file in read only mode, hence the 'r', continue if it works successfully
+      $header = fgetcsv($fh); // first line = column headers
+      while (($data = fgetcsv($fh)) !== false) { //keep  looping while there is more to read in the csv file
+        $row = array_combine($header, $data); // create an associative array (key-value pairs)
+        $row['appraised_value'] = (float)($row['appraised_value'] ?? 0); //making this a float instead of a string
+        $rows[] = $row; // take the current $row array and push it to the end of the $rows array
+      }
+      fclose($fh); //close file
+    }
+}
 
 ?>
 
