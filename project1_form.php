@@ -22,6 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     ['E-mail Address',$email],['Appraised Value of House',$appraised]] as [$label,$val]){
 if ($val === '') { $errors[] = $label . ' is required.'; } //phone is optional thus why its not listed here in the array
 }
+if ($email && !filter_var($email, FILTER_VALIDATE_EMAIL)) { $errors[] = 'E-mail Address is invalid.'; } //use built in email validation t check if email is valid
 }
 ?>
 
