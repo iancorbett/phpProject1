@@ -25,6 +25,18 @@ if ($val === '') { $errors[] = $label . ' is required.'; } //phone is optional t
 if ($email && !filter_var($email, FILTER_VALIDATE_EMAIL)) { $errors[] = 'E-mail Address is invalid.'; } //use built in email validation t check if email is valid
 if ($zip && !preg_match('/^\\d{5}(-\\d{4})?$/', $zip)) { $errors[] = 'Zip Code should be 5 digits (optional +4).'; } //make sure zip code is either 4 or five numbers, no strings etc
 if ($appraised && !is_numeric($appraised)) { $errors[] = 'Appraised Value must be numeric.'; } //make sure appraised is a numeric value
+
+if (!$errors){ // (if there are no errors)
+    // Append to CSV. If new file, write header first.
+    $isNew = !file_exists($csvPath); //only runs the very first time
+    $fh = fopen($csvPath, 'a'); //open file for writing, 'a' is php syntax for append mode
+    if ($isNew){
+      fputcsv($fh, ['first_name','last_name','street','city','state','zip','email','phone','appraised_value','submitted_at']); //writes the header row
+    }
+    fputcsv($fh, [$first,$last,$street,$city,$state,$zip,$email,$phone,$appraised,date('c')]); //write single line to csv with all the input
+    fclose($fh); //close file
+    $success = true; //set to true for successful submission
+  }
 }
 ?>
 
