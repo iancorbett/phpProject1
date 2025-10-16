@@ -31,6 +31,23 @@ if ($val === '') { $errors[] = $label . ' is required.'; } //phone is optional t
     <title>Project-1: Data-Collection</title>
 </head>
 <body>
+
+<h1>Project #1 – Data Collection Form</h1>
+
+ <form method="post" novalidate> <!-- already validating with earlier foreach loop -->
+    <label>First Name<input name="first_name" required></label>
+    <label>Last Name<input name="last_name" required></label>
+    <label>Street Address<input name="street" required></label>
+    <label>City<input name="city" required></label>
+    <label>State<input name="state" maxlength="2" placeholder="PA" required></label>
+    <label>Zip Code<input name="zip" inputmode="numeric" pattern="\\d{5}(-\\d{4})?" placeholder="#####"></label>
+    <label>E-mail Address<input type="email" name="email" required></label>
+    <label>Phone Number (optional)<input name="phone" placeholder="(###) ###-####"></label>
+    <label>Appraised Value of House<input name="appraised_value" inputmode="decimal" placeholder="250000" required></label>
+    <div style="grid-column:1/-1">
+      <button type="submit">Save to CSV</button>
+    </div>
+  </form>
     
 </body>
 </html>
