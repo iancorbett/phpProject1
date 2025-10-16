@@ -24,6 +24,7 @@ if ($val === '') { $errors[] = $label . ' is required.'; } //phone is optional t
 }
 if ($email && !filter_var($email, FILTER_VALIDATE_EMAIL)) { $errors[] = 'E-mail Address is invalid.'; } //use built in email validation t check if email is valid
 if ($zip && !preg_match('/^\\d{5}(-\\d{4})?$/', $zip)) { $errors[] = 'Zip Code should be 5 digits (optional +4).'; } //make sure zip code is either 4 or five numbers, no strings etc
+if ($appraised && !is_numeric($appraised)) { $errors[] = 'Appraised Value must be numeric.'; } //make sure appraised is a numeric value
 }
 ?>
 
