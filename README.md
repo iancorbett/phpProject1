@@ -28,4 +28,16 @@ All data is stored locally in `form_submissions1.csv`, which acts as a lightweig
 
 ---
 
+##  How to Run
+1. Make sure PHP 8+ is installed.  
+2. From the project directory, start the built-in PHP server:
+   
+   php -S localhost:3000
+In your browser go to
+ http://localhost:3000/project1_form.php
+
+Fill out the form and submit.
+
+Click “View CSV” to see your saved entries.
+
 
