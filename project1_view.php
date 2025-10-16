@@ -31,5 +31,6 @@ $csvPath = __DIR__ . '/data/form_submissions1.csv';
       </thead>
     </table>
     
+    <?php endif; ?>
 </body>
 </html>
