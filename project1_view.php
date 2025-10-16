@@ -3,6 +3,7 @@
 $csvPath = __DIR__ . '/data/form_submissions1.csv';
 
 $rows = [];
+$sum = 0.0;
 
 if (file_exists($csvPath)) { // only if csv file exists
     if (($fh = fopen($csvPath, 'r')) !== false) { //open the file in read only mode, hence the 'r', continue if it works successfully
@@ -20,6 +21,10 @@ if (file_exists($csvPath)) { // only if csv file exists
         if ($c !== 0) return $c; //only returns zero if they are identical
         return strcasecmp($a['last_name'] ?? '', $b['last_name'] ?? ''); //compare by cities if last names are identical
       });
+
+      foreach ($rows as $r) {
+        $sum += (float)$r['appraised_value']; //value of all entries combined in the csv
+      }
 }
 
 ?>
