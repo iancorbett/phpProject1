@@ -55,6 +55,22 @@ if (file_exists($csvPath)) { // only if csv file exists
           <th>Appraised</th><th>Submitted</th>
         </tr>
       </thead>
+      <tbody>
+        <?php foreach ($rows as $r): ?>
+          <tr>
+            <td><?= htmlspecialchars($r['first_name'] ?? '') ?></td>
+            <td><?= htmlspecialchars($r['last_name'] ?? '') ?></td>
+            <td><?= htmlspecialchars($r['street'] ?? '') ?></td>
+            <td><?= htmlspecialchars($r['city'] ?? '') ?></td>
+            <td><?= htmlspecialchars($r['state'] ?? '') ?></td>
+            <td><?= htmlspecialchars($r['zip'] ?? '') ?></td>
+            <td><?= htmlspecialchars($r['email'] ?? '') ?></td>
+            <td><?= htmlspecialchars($r['phone'] ?? '') ?></td>
+            <td><?= number_format((float)($r['appraised_value'] ?? 0), 2) ?></td>
+            <td><?= htmlspecialchars($r['submitted_at'] ?? '') ?></td>
+          </tr>
+        <?php endforeach; ?>
+      </tbody>
     </table>
     
     <?php endif; ?>
