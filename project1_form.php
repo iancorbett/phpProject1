@@ -54,13 +54,21 @@ if (!$errors){ // (if there are no errors)
 
  <form method="post" novalidate> <!-- already validating with earlier foreach loop -->
     <label>First Name<input name="first_name" required></label>
+    <br>
     <label>Last Name<input name="last_name" required></label>
+    <br>
     <label>Street Address<input name="street" required></label>
+    <br>
     <label>City<input name="city" required></label>
+    <br>
     <label>State<input name="state" maxlength="2" placeholder="PA" required></label>
+    <br>
     <label>Zip Code<input name="zip" inputmode="numeric" pattern="\\d{5}(-\\d{4})?" placeholder="#####"></label>
+    <br>
     <label>E-mail Address<input type="email" name="email" required></label>
+    <br>
     <label>Phone Number (optional)<input name="phone" placeholder="(###) ###-####"></label>
+    <br>
     <label>Appraised Value of House<input name="appraised_value" inputmode="decimal" placeholder="250000" required></label>
     <div style="grid-column:1/-1">
       <button type="submit">Save to CSV</button>
