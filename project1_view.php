@@ -1,6 +1,6 @@
 <?php
 
-$csvPath = __DIR__ . '/data/form_submissions1.csv';
+$csvPath = __DIR__ . '/form_submissions1.csv';
 
 $rows = [];
 $sum = 0.0;

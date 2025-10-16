@@ -1,6 +1,6 @@
 <?php
 
-$csvPath = __DIR__ . '/data/form_submissions1.csv'; //file path to our csv
+$csvPath = __DIR__ . '/form_submissions1.csv'; //file path to our csv
 $errors = []; //errors will be logged in array that we start as empty
 $success = false; //initialize to false, will be true upon successful update to the csv
 
@@ -56,7 +56,7 @@ if (!$errors){ // (if there are no errors)
     <label>First Name<input name="first_name" required></label>
     <br>
     <label>Last Name<input name="last_name" required></label>
-    <br>
+    <br style="margin-top: 5px;">
     <label>Street Address<input name="street" required></label>
     <br>
     <label>City<input name="city" required></label>
