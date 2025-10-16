@@ -12,9 +12,20 @@ $csvPath = __DIR__ . '/data/form_submissions1.csv';
 </head>
 <body>
 <h1>Project #1 – CSV Viewer</h1>
-  <nav>
-     <a href="project1_form.php">Back to Form</a>
-  </nav>
+  
+<nav>
+    <a href="project1_form.php">Back to Form</a>
+</nav>  
+
+<table class="table">
+      <thead>
+        <tr>
+          <th>First</th><th>Last</th><th>Street</th><th>City</th><th>State</th>
+          <th>Zip</th><th>Email</th><th>Phone</th>
+          <th>Appraised</th><th>Submitted</th>
+        </tr>
+      </thead>
+    </table>
     
 </body>
 </html>
