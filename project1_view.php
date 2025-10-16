@@ -1,6 +1,10 @@
 <?php
 
 $csvPath = __DIR__ . '/data/form_submissions1.csv';
+
+$rows = [];
+
+
 ?>
 
 <!DOCTYPE html>
