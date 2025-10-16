@@ -6,6 +6,8 @@ It demonstrates clean procedural PHP, form handling, validation, and CSV data ma
 
 ---
 
+<img width="494" height="338" alt="Screenshot 2025-10-16 at 4 20 51 PM" src="https://github.com/user-attachments/assets/4bf07190-1b4e-4ad4-9b73-a906f6b2abfc" />
+
 ##  Overview
 The project contains **two pages**:
 
